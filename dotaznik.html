@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<script type="text/javascript">
+function showAlert()
+{
+	var fname, lname;
+	fname=document.getElementById("firstname").value;
+	lname=document.getElementById("lastname").value;
+//alert("Hello "+fname+" "+lname+" ! You pressed the button OK.");
+document.getElementById("output").innerHTML= "Hello "+fname+" "+lname+" ! You pressed the button OK."
+
+	}
+	function deleteOutput(){
+		document.getElementById("output").innerHTML="";
+	}
+
+	function printMessage(){
+		document.getElementById("message").innerHTML="Click on me";
+	}
+		function deleteMessage(){		
+			document.getElementById("message").innerHTML="";
+	}
+
+	</script>
+	<TITLE> Formular </TITLE>
+</HEAD>
+<THEAD>
+<body>
+<Form>
+<TABLE BORDER="2" WIDTH="60%">
+<TR>
+            <TH>Name:</TH>
+			<TH><input type="text" name="Name" id="firstname" minlength="5" maxlength="15"></TH>
+		</TR>
+		<TR>
+            <TH>Surname:</TH>
+			<TH><input type="text" name="Surname" id="lastname" minlength="5" maxlength="15"></TH>
+		</TR>
+		<TR>
+            <TH><input value="reset" type="button" style="color:red;" onclick="deleteOutput()"></TH>
+			<TH><input value="OK" type="button" style="color:green;" onclick="showAlert()" onmouseover="printMessage()" onmouseout="deleteMessage()""
+		</TR>		
+		</TABLE>
+		</form>
+		<div id="output"></div>
+		<DIV id="message"></DIV>	
+		</body>
+</THEAD>
